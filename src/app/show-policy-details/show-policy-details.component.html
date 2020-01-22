@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a style="font-weight: bolder;font-size: 30px;" routerLink="/home">Home</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/show-agents">Agents Info</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/show-customers">Customers Info</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/show-policy-details">Policy Details</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/add-agent">Add Agent</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/add-customer">Add Customer</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/edit-clia-details">Edit Profile</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/edit-agent-details">Edit Agent</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/edit-customer-details">Edit Customer</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/add-new-plans">Add New Plans</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/add-notice">Add Notice</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
+        </ul>
+
+        <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
+          <li class="active"><a routerLink="/home">Log Out</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+      <!--show policies  -->
+      <h1 class="text-center">Policies Information</h1>
+      <hr>
+          <div class="container">
+
+            <div class="table-responsive">
+              <table class="table table-hover table-dark" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th>Policy Number</th>
+                    <th>Plan No</th>
+                    <th>dateOfCommencement</th>
+                    <th>dateOfMaturity</th>
+                    <th>premiumAmount</th>
+                    <th>premiumType</th>
+                    <th>sumAssured</th>
+                    <th>policyStatus</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let policy of policies'>
+                    <td>{{policy.policyNumber}}</td>
+                    <td>{{policy.planNo}}</td>
+                    <td>{{policy.dateOfCommencement}}</td>
+                    <td>{{policy.dateOfMaturity}}</td>
+                    <td>{{policy.premiumAmount}}</td>
+                    <td>{{policy.premiumType}}</td>
+                    <td>{{policy.sumAssured}}</td>
+                    <td style="text-decoration: wavy;color: red;">{{policy.policyStatus}}</td>
+                    <td>
+                      <ul class="nav navbar-brand" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 15px;">
+                        <li class="active"><a routerLink="/policies/{{policies.policyNumber}}" >Show Details</a></li>
+                    </ul>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

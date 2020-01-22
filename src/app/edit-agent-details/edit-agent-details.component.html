@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Add Agent</title>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a style="font-weight: bolder;font-size: 30px;" routerLink="/home">Home</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/show-agents">Agents Info</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/show-customers">Customers Info</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/show-policy-details">Policy Details</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/add-agent">Add Agent</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/add-customer">Add Customer</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/edit-clia-details">Edit Profile</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/edit-agent-details">Edit Agent</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/edit-customer-details">Edit Customer</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/add-new-plans">Add New Plans</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/add-notice">Add Notice</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
+      </ul>
+
+      <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
+        <li class="active"><a routerLink="/home">Log Out</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+  <!-- add-agent -->
+
+  <div class="jumbotron" style="width: 30%;margin-left: 30%;">
+
+    <form #myForm="ngForm" (ngSubmit)="editAgentById(myForm)" role="form">
+      <div class="form-group">
+        <label for="phNumber">Agent ID:</label>
+        <input type="name" ngModel class="form-control" placeholder="" value="{{agentId}}" name="phNumber">
+      </div>
+      <h2>Update Contact Details :</h2>
+      <div class="form-group">
+        <label for="phNumber">Phone Number:</label>
+        <input type="name"  ngModel class="form-control" placeholder="." name="phNumber">
+      </div>
+      <h2> Update Address Details :</h2>
+      <div class="form-group">
+        <label for="addresline1">Address Line 1:</label>
+        <input type="name" ngModel class="form-control" placeholder="." name="addressLine1">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="name" ngModel class="form-control" placeholder="." name="city">
+      </div>
+
+      <div class="form-group">
+        <label for="district">District:</label>
+        <input type="name" ngModel class="form-control" placeholder="." name="district">
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="name" ngModel class="form-control" placeholder="." name="state">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+
+  <!-- <div class="form-style-6">
+    <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+
+
+        <div class="form-group">
+
+        <input type="text" name="fName" placeholder="First Name" />
+        <input type="text" name="lName" placeholder="Last Name" />
+        <input type="text" name="lName" placeholder="Last Name" />
+        <input type="text" name="dob" placeholder="Birth Date" />
+        <input type="text" name="gender" placeholder="Gender" />
+        <input type="text" name="email" placeholder="Email" />
+        <input type="text" name="phNumber" placeholder="Enter Your Phone Number" />
+
+        <input type="text" name="addressLine1" placeholder="Enter Your Address Here"/>
+        <input type="text" name="city" placeholder="city" />
+        <input type="text" name="district" placeholder="district" />
+        <input type="text" name="state" placeholder="state" />
+
+        <input type="text" name="aadharId" placeholder="aadharId" />
+        <input type="text" name="pancardId" placeholder="pancardId" />
+        <input type="text" name="dlNumber" placeholder="dlNumber" />
+        <input type="text" name="mStatus" placeholder="mStatus" />
+        <input type="text" name="qualification" placeholder="Educational Qualification" />
+
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+
+
+    </form>
+  </div> -->
+
+    <!-- Jquery JS-->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/vendor/datepicker/moment.min.js"></script>
+    <script src="assets/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="assets/js/global.js"></script>
+ <!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!-- Bootstrap JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

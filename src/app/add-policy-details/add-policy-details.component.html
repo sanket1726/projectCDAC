@@ -1,0 +1,259 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Colorlib Templates">
+        <meta name="author" content="Colorlib">
+        <meta name="keywords" content="Colorlib Templates">
+
+        <!-- Title Page-->
+        <title>Au Register Forms by Colorlib</title>
+
+        <!-- Icons font CSS-->
+
+        <!-- Font special for pages-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a style="font-weight: bolder;font-size: 30px;" routerLink="/home">Home</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/show-agents">Agents Info</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/show-customers">Customers Info</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/show-policy-details">Policy Details</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/add-agent">Add Agent</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/add-customer">Add Customer</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/edit-clia-details">Edit Profile</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/edit-agent-details">Edit Agent</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/edit-customer-details">Edit Customer</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/add-new-plans">Add New Plans</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/add-notice">Add Notice</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
+          </ul>
+
+          <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
+            <li class="active"><a routerLink="/home">Log Out</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+
+        <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+            <div class="wrapper wrapper--w790">
+                <div class="card card-5">
+                    <div class="card-heading">
+                        <h2 class="title">Policy Details Form</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+
+                          <div class="form-row">
+                            <div class="name">Customer ID :</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="custId">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Policy No :</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="polId">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Plan No :</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="polId">
+                                </div>
+                            </div>
+                        </div>
+
+
+                            <div class="form-row">
+                                <div class="name">Date Of Commencement</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="date" name="doc">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Date Of Maturity</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="date" name="dom">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="name">Premium(in Rs.)</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="text" name="premium">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="name">Plan Type</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="planType" style="box-shadow: black 1px 1px 10px;">
+                                                <option disabled="disabled" selected="selected" >Plan</option>
+                                                <option>Term Insurance</option>
+                                                <option>Endowment</option>
+                                                <option>ULIP</option>
+                                                <option>Money Back</option>
+                                                <option>Pension</option>
+
+
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="name">Payment Mode</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="payMode" style="box-shadow: black 1px 1px 10px;">
+                                                <option disabled="disabled" selected="selected" >PayMode</option>
+                                                <option>Quarterly</option>
+                                                <option>Half Yearly</option>
+                                                <option>Yearly</option>
+
+
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                          <div class="form-row">
+                            <div class="name">Sum Assured</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="sumAssured">
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                              <div class="name">Policy Term</div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <div class="rs-select2 js-select-simple select--no-search">
+                                          <select name="polTerm" style="box-shadow: black 1px 1px 10px;">
+                                              <option disabled="disabled" selected="selected" >Term</option>
+                                              <option>20</option>
+                                              <option>21</option>
+                                              <option>22</option>
+                                              <option>23</option>
+                                              <option>24</option>
+                                              <option>25</option>
+                                              <option>26</option>
+                                              <option>27</option>
+                                              <option>28</option>
+                                              <option>29</option>
+                                              <option>30</option>
+
+                                          </select>
+                                          <div class="select-dropdown"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="name">Policy Status</div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <input class="input--style-5" type="text" name="polStatus">
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div>
+                                <button class="btn btn--radius-2 btn--red" type="submit" style="margin-left: 30%;">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+    </html>
+    <!-- end document-->
