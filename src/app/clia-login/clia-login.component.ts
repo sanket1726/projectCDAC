@@ -26,7 +26,7 @@ login(formData) {
                   console.log(result);
                   if (result !== null) {
                   this.u = result;
-                  console.log('valid login');
+                  console.log('valid clia login');
                   console.log(result);
                   window.sessionStorage.setItem('object', JSON.stringify(this.u));
                   window.sessionStorage.setItem('isActive' , '1');

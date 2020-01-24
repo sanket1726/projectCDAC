@@ -56,19 +56,18 @@
           <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
         </ul>
 
-
-
-
         <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
 
         <button type="button" (click)=logOut() class="btn btn-lg btn-danger">Logout</button>
         </ul>
-
-
-
       </div><!-- /.navbar-collapse -->
     </nav>
 
+    <div>
+      <h1>
+        {{customer.agentId}}
+      </h1>
+    </div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

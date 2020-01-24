@@ -8,13 +8,18 @@ import { AuthService } from '../auth.service';
 })
 export class AgentComponent implements OnInit {
 
+  customer : any;
   constructor(private auth: AuthService) { }
-
   logOut() {
     this.auth.Logout();
 
   }
+
   ngOnInit() {
+
+    this.customer = JSON.parse(window.sessionStorage.getItem('object'));
+    console.log(this.customer.agentId);
+
   }
 
 }

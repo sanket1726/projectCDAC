@@ -17,19 +17,21 @@ export class AgentLoginComponent implements OnInit {
 
   login(formData) {
         console.log(formData.form.value);
-        let agent = formData.form.value;
+        const agent = formData.form.value;
 
         console.log(agent);
-        let agentLog = this.service.loginAgent(agent);
+        const agentLog = this.service.loginAgent(agent);
         agentLog.subscribe((result) => {
           console.log(result);
           if (result !== null) {
           this.u = result;
-          console.log('valid login');
+          console.log('valid agent login');
           console.log(result);
           window.sessionStorage.setItem('object', JSON.stringify(this.u));
           window.sessionStorage.setItem('isActive' , '1');
 
+          let id = JSON.parse(window.sessionStorage.getItem('object'));
+          console.log(id.agentId);
           // this.auth.setSession(agentLog);
           // console.log(a);
           this.router.navigate(['agent']);

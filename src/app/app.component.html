@@ -8,95 +8,39 @@
     <title>Title Page</title>
 
     <!-- Bootstrap CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-
-    <!-- Trial -->
+   <!-- Trial -->
      <!-- header -->
      <div class="card-header" style="background-color: rgb(221, 217, 214)">
       <div style="text-align: center;">
         <h1 class="logo-caption" style="font-size: 20px;color: brown;box-shadow: silver 1px 1px 10px;background-color: honeydew;"><span class="tweak" style="font-weight: bolder;font-size: 50px;color: black;text-shadow: silver 1px 1px 10px;">LIC</span><br> CLIA's PORTAL</h1>
       </div>
      </div>
+
+     <div *ngIf="service.isCLIA()">
+sanket
+     </div>
+
+
+     <div *ngIf="service.isAgent()">
+beande
+     </div>
+
+     <div *ngIf="service.isCustomer()">
+asdfghj
+     </div>
 <div>
 <router-outlet></router-outlet>
 </div>
-<!-- footer static-->
-<!-- <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
-  <div class="container">
-    <div class="row row-30">
-      <div class="col-md-4 col-xl-5">
-        <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
-          <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
-
-          <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h5>Contacts</h5>
-        <dl class="contact-list">
-          <dt>Address:</dt>
-          <dd>798 South Park Avenue, Jaipur, Raj</dd>
-        </dl>
-        <dl class="contact-list">
-          <dt>email:</dt>
-          <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
-        </dl>
-        <dl class="contact-list">
-          <dt>phones:</dt>
-          <dd><a href="tel:#">https://karosearch.com</a> <span>or</span> <a href="tel:#">https://karosearch.com</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="col-md-4 col-xl-3">
-        <h5>Links</h5>
-        <ul class="nav-list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacts</a></li>
-          <li><a href="#">Pricing</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row no-gutters social-container">
-    <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
-    <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
-    <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
-    <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
-  </div>
-</footer> -->
-
-
-<!-- footer dynamic -->
-<!-- <div class="footer">
-  <div id="button"></div>
-<div id="container">
-<div id="cont">
-<div class="footer_center">
-<h2 style="margin-top: 50px;">Mr.Rajendra Mali</h2>
-  <h1 routerLink="www.facebook.com/ranjendramali" class="fa fa-facebook" style="font-size: 52px;margin-bottom:100px;margin-top: 2px;"></h1>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
-</div>
-</div> -->
-
-
-
-
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->

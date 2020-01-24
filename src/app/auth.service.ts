@@ -15,7 +15,7 @@ export class AuthService {
    } else {
     console.log('User Has not Logged in');
     alert('Please Login...');
-    this.router.navigate(['/home']);
+    this.router.navigate(['home']);
     return false;
    }
   }
@@ -43,7 +43,7 @@ export class AuthService {
   Logout() {
     window.sessionStorage.setItem('isActive', '0');
     window.sessionStorage.setItem('object', '0');
-    this.router.navigate(['/home']);
+    this.router.navigate(['home']);
   }
 
   Login() {
