@@ -8,10 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-agent.component.css']
 })
 export class AddAgentComponent implements OnInit {
-  public noOfCustomers = 0;
-  public noOfPolicies = 0;
-  agent: any;
+
   constructor(public dataService: DataService , public router: Router) { }
+
+   noOfCustomers = '0';
+   noOfPolicies = '0';
+  agent: any;
+
 
   add(formData) {
     console.log(formData.form.value);
@@ -20,7 +23,7 @@ export class AddAgentComponent implements OnInit {
     console.log(a);
     this.dataService.addAgent(a).subscribe((result) => {
       console.log(result);
-      this.router.navigate(['clia']);
+      this.router.navigate(['/clia']);
     });
   }
   ngOnInit() {

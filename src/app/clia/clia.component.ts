@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-clia',
   templateUrl: './clia.component.html',
@@ -7,13 +8,11 @@ import { DataService } from '../data.service';
 })
 export class CliaComponent implements OnInit {
 
-  clias: any;
+  constructor(public service: DataService, public auth: AuthService) {  }
 
-  constructor(public service: DataService) {
-
+  logOut() {
+    this.auth.Logout();
   }
-
-
 
   ngOnInit() {
   }

@@ -12,26 +12,24 @@ export class DataService {
   policyDetails = 'http://localhost:8080/liccliaproject/policies';
   constructor(public http: HttpClient) { }
 
+//Data services for clia
+
+  getDataOfClia() {
+    return this.http.get(this.cliaUrl);
+  }
+
+  loginCLIA(data) {
+    return this.http.get('http://localhost:8080/liccliaproject/clia/login/' + data.cliaId + '/' + data.phNumber);
+  }
+
+//Data services for agent
   getDataOfAgents() {
     return this.http.get(this.agentsUrl);
   }
 
-  getDataOfCustomers() {
-    return this.http.get(this.customersDetails);
-  }
-
-  getDataOfPolicies() {
-    return this.http.get(this.policyDetails);
-  }
-
   addAgent(agent) {
     console.log(agent);
-
     return this.http.post(this.agentsUrl, agent);
-  }
-
-  getAgentById(agentId) {
-    return this.http.get(this.agentsUrl + agentId);
   }
 
   editAgentById(agent) {
@@ -46,11 +44,33 @@ export class DataService {
     return this.http.put(`${this.agentsUrl}/${agent.agentId}`, formData);
   }
 
-  loginCLIA(data) {
-    return this.http.get('http://localhost:8080/liccliaproject/clia/login/' + data.cliaId + '/' + data.phNumber);
+  getAgentById(agentId) {
+    return this.http.get(this.agentsUrl + agentId);
   }
 
   loginAgent(data) {
     return this.http.get('http://localhost:8080/liccliaproject/agents/login/' + data.agentId + '/' + data.phNumber);
+  }
+
+//data services for agents
+  getDataOfCustomers() {
+    return this.http.get(this.customersDetails);
+  }
+
+  getDataOfPolicies() {
+    return this.http.get(this.policyDetails);
+  }
+
+
+
+
+
+
+
+
+
+
+  loginCustomer(data) {
+    return this.http.get('http://localhost:8080/liccliaproject/policyHolders/login/' + data.custId + '/' + data.phNumber);
   }
 }

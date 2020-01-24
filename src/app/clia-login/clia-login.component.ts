@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-clia-login',
@@ -9,30 +10,41 @@ import { Router } from '@angular/router';
 })
 export class CliaLoginComponent implements OnInit {
 
-  // clia: any;
+  u: any;
 
-  constructor(private service: DataService, private router: Router) { }
+  constructor(private service: DataService,
+              private router: Router,
+              private auth: AuthService) { }
+
+login(formData) {
+                console.log(formData.form.value);
+                let clia = formData.form.value;
+
+                console.log(clia);
+                let cliaLog = this.service.loginCLIA(clia);
+                cliaLog.subscribe((result) => {
+                  console.log(result);
+                  if (result !== null) {
+                  this.u = result;
+                  console.log('valid login');
+                  console.log(result);
+                  window.sessionStorage.setItem('object', JSON.stringify(this.u));
+                  window.sessionStorage.setItem('isActive' , '1');
+
+                  // this.auth.setSession(agentLog);
+                  // console.log(a);
+                  this.router.navigate(['clia']);
+              } else {
+                console.log('login failed');
+              }
+                  });
+
+
+}
 
   ngOnInit() {
   }
 
-  login(formData) {
-    console.log(formData.form.value);
-    let clia = formData.form.value;
 
-    console.log(clia);
-    let a = this.service.loginCLIA(clia);
-    a.subscribe((result) => {
-      console.log(result);
-      if (a !== null) {
-        console.log('valid login');
-        console.log(a);
-        this.router.navigate(['clia']);
-      } else {
-        console.log('login failed');
-      }
-
-    });
-  }
 
 }

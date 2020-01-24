@@ -47,20 +47,8 @@
         <li class="active"><a routerLink="/add-agent">Add Agent</a></li>
       </ul>
 
-      <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/add-customer">Add Customer</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav">
         <li class="active"><a routerLink="/edit-clia-details">Edit Profile</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/edit-agent-details">Edit Agent</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/edit-customer-details">Edit Customer</a></li>
       </ul>
 
       <ul class="nav navbar-nav">
@@ -157,27 +145,32 @@
 
       <div class="form-group">
         <label for="aadharId">AadharId:</label>
-        <input type="text" ngModel class="form-control" placeholder="." name="aadharId">
+        <input type="text" ngModel class="form-control"  name="aadharId">
       </div>
 
       <div class="form-group">
         <label for="pancardId">pancardId:</label>
-        <input type="text" ngModel class="form-control" placeholder="." name="pancardId">
+        <input type="text" ngModel class="form-control"  name="pancardId">
       </div>
 
       <div class="form-group">
         <label for="dlNumber">DL Number:</label>
-        <input type="text" ngModel class="form-control" placeholder="." name="dlNumber">
+        <input type="text" ngModel class="form-control"  name="dlNumber">
       </div>
 
       <div class="form-group" >
         <label for="noOfCustomers">No of Customers:</label>
-        <input  type="text" ngModel class="form-control"  name="noOfCustomers" >
+        <input  type="number" ngModel class="form-control" name="noOfCustomers" >
       </div>
 
       <div class="form-group" >
         <label for="noOfPolicies">No Of Policies:</label>
-        <input  type="text" ngModel class="form-control"  name="noOfPolicies">
+        <input  type="number" ngModel class="form-control" ng-value="0" name="noOfPolicies">
+      </div>
+
+      <div class="form-group" >
+        <label for="cliaId">CLIA Id:</label>
+        <input  type="number" ngModel class="form-control" name="cliaId">
       </div>
 
       <button type="submit" class="btn btn-primary">Save</button>

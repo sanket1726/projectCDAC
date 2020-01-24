@@ -11,7 +11,9 @@ import { AuthService } from '../auth.service';
 export class AgentLoginComponent implements OnInit {
 
   u: any;
-  constructor(private service: DataService, private router: Router, private auth: AuthService) { }
+  constructor(private service: DataService,
+              private router: Router,
+              private auth: AuthService) { }
 
   login(formData) {
         console.log(formData.form.value);

@@ -14,14 +14,13 @@ export class AuthService {
      return true;
    } else {
     console.log('User Has not Logged in');
-    this.router.navigate(['/agent-login']);
+    alert('Please Login...');
+    this.router.navigate(['/home']);
     return false;
    }
   }
 
   setSession(object) {
-
-
     return window.sessionStorage.setItem('object', JSON.stringify(object));
   }
 
@@ -44,7 +43,7 @@ export class AuthService {
   Logout() {
     window.sessionStorage.setItem('isActive', '0');
     window.sessionStorage.setItem('object', '0');
-    this.router.navigate(['/agent-login']);
+    this.router.navigate(['/home']);
   }
 
   Login() {

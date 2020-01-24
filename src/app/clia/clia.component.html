@@ -46,19 +46,7 @@
         </ul>
 
         <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/add-customer">Add Customer</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
           <li class="active"><a routerLink="/edit-clia-details">Edit Profile</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/edit-agent-details">Edit Agent</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/edit-customer-details">Edit Customer</a></li>
         </ul>
 
         <ul class="nav navbar-nav">
@@ -70,11 +58,13 @@
         </ul>
 
         <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
+          <li class="active"><a routerLink="/download-forms">Add New Forms & Download Forms</a></li>
         </ul>
 
         <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
-          <li class="active"><a routerLink="/home">Log Out</a></li>
+
+          <button type="button" (click)=logOut() class="btn btn-danger">Logout</button>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
