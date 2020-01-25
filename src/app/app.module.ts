@@ -65,7 +65,7 @@ import { AuthService } from './auth.service';
     FormsModule,
     RouterModule.forRoot([
 
-      {path: '', component: AppComponent},
+      {path: '', component: HomeComponent},
       {path: 'home', component: HomeComponent },
       {path: 'agent-login', component: AgentLoginComponent},
       {path: 'clia-login', component: CliaLoginComponent},
