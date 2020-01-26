@@ -8,6 +8,7 @@ import { AuthService } from '../auth.service';
 })
 export class CliaComponent implements OnInit {
 
+  clia: any;
   constructor(public service: DataService, public auth: AuthService) {  }
 
   logOut() {
@@ -15,6 +16,7 @@ export class CliaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.clia =  JSON.parse(window.sessionStorage.getItem('object'));
   }
 
 }

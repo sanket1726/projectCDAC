@@ -39,16 +39,10 @@ export class DataService {
     return this.http.post(this.agentsUrl, agent);
   }
 
-  editAgentById(agent) {
+  editAgentById(agentId , agent) {
     console.log(agent);
-    const formData = new FormData();
-    formData.append('phNumber', agent.phNumber);
-    formData.append('addressLine1', agent.addressLine1);
-    formData.append('city', agent.city);
-    formData.append('district', agent.district);
-    formData.append('state', agent.state);
-    console.log(agent);
-    return this.http.put(`${this.agentsUrl}/${agent.agentId}`, formData);
+
+    return this.http.put('http://localhost:8080/liccliaproject/agents/edit-agent/' + agentId , agent);
   }
 
   getAgentById(agentId) {
