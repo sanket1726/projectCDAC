@@ -11,9 +11,9 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'LIC CLIA';
-  public role = 'CLIA';
-  public name = 'Mr.Sanket Benade';
+  public title = '';
+  public role = '';
+  public name = '';
   user : any;
   constructor(public service: DataService,
               public authService: AuthService) {

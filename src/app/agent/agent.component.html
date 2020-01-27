@@ -19,56 +19,26 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div class="jumbotron">
+
+      <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="text-align: center;font-size: 30px; font-weight: bolder;">My-Profile</h3>
+          </div>
+          <div class="panel-body" style="font-size: 25px;">
+            Agent Id : {{agent.agentId}}
+            <hr>
+            Name : <small>{{agent.fName}} {{agent.mName}} {{agent.lName}}</small>
+            <hr style="width: 400px;margin-left: 0px;">
+            Email-ID : <small >{{agent.email}}</small>
+            <hr style="width: 400px;margin-left: 0px;">
+            Total Customers : {{agent.noOfCustomers}}
+          </div>
+          <div class="panel-body">
+
+          </div>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/home">Home</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/show-customers">Customer Details</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/show-policies">Policy Details</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/edit-agent-details">Edit Profile</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/send-greeting">Make a wish</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a routerLink="/download-forms">Download Forms</a></li>
-        </ul>
-
-        <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
-
-        <button type="button" (click)=logOut() class="btn btn-lg btn-danger">Logout</button>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
-
-    <div>
-      <h1>
-        {{customer.agentId}}
-      </h1>
     </div>
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->

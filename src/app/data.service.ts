@@ -7,7 +7,7 @@ import { from } from 'rxjs';
 })
 export class DataService {
   cliaUrl = 'http://localhost:8080/liccliaproject/clia/';
-  agentsUrl = 'http://localhost:8080/liccliaproject/agents';
+  agentsUrl = 'http://localhost:8080/liccliaproject/agents/';
   customersUrl = 'http://localhost:8080/liccliaproject/policyHolders/';
   policyDetailsUrl = 'http://localhost:8080/liccliaproject/policies';
   healthDetailsUrl = 'http://localhost:8080/liccliaproject/healthDetails';

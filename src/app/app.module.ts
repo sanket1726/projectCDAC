@@ -31,6 +31,7 @@ import { CustomerUpdateContactInformationComponent } from './customer-update-con
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DataService } from './data.service';
 import { AuthService } from './auth.service';
+import { ShowCustByAIdComponent } from './show-cust-by-aid/show-cust-by-aid.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { AuthService } from './auth.service';
     RequestMeetComponent,
     ViewPolicyStatusComponent,
     CustomerUpdateContactInformationComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ShowCustByAIdComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,7 @@ import { AuthService } from './auth.service';
       {path: 'edit-agent-details/:agentId', component: EditAgentDetailsComponent ,  canActivate: [AuthService]},
       {path: 'edit-customer-details', component: EditCustomerDetailsComponent , canActivate: [AuthService]},
       {path: 'add-agent', component: AddAgentComponent , canActivate: [AuthService]},
-      {path: 'add-customer', component: AddCustomerComponent , canActivate: [AuthService]},
+      {path: 'add-customer/:agentId', component: AddCustomerComponent , canActivate: [AuthService]},
       {path: 'add-policy-details' , component: AddPolicyDetailsComponent},
       {path: 'show-agents', component: ShowAgentsComponent , canActivate: [AuthService]},
       {path: 'show-customers', component: ShowCustomersComponent , canActivate: [AuthService]},
@@ -89,7 +91,8 @@ import { AuthService } from './auth.service';
       {path: 'download-forms', component: DownloadFormsComponent},
       {path: 'show-policy-details', component: ShowPolicyDetailsComponent , canActivate: [AuthService]},
       {path: 'view-policy-status', component: ViewPolicyStatusComponent , canActivate: [AuthService]},
-      {path: 'customer-update-contact-infomation', component: CustomerUpdateContactInformationComponent , canActivate: [AuthService]}
+      {path: 'customer-update-contact-infomation', component: CustomerUpdateContactInformationComponent , canActivate: [AuthService]},
+      {path: 'show-cust-by-aid/:agentId', component: ShowCustByAIdComponent , canActivate: [AuthService]}
     ]),
   ],
   providers: [DataService],

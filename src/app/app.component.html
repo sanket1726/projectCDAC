@@ -93,7 +93,40 @@
 
 <!--AGENT's navbar  -->
      <div *ngIf="service.isAgent()">
-          <h1>{{user.agentId}}</h1>
+      <!-- for agent -->
+      <div class="navbar" style="background-color: honeydew;box-shadow: lightgray 1px 1px 10px;">
+        <a class="navbar-brand" routerLink="/agent"><span class="glyphicon glyphicon-" aria-hidden="true"></span> My-Details</a>
+        <ul class="nav navbar-nav">
+
+          <li class="">
+            <a routerLink="/show-cust-by-aid/{{user.agentId}}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers Info</a>
+          </li>
+
+          <li class="active">
+            <a routerLink="/add-customer/{{user.agentId}}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Add Customer</a>
+          </li>
+
+          <li class="active">
+            <a routerLink="/show-policy-details"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> PolicyDetails</span> </a>
+          </li>
+
+          <li class="active">
+            <a routerLink="/show-plans"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Show-Plans</span> </a>
+          </li>
+
+          <li class="active">
+            <a routerLink="/download-forms"><span class="glyphicon glyphicon-save" aria-hidden="true"> Download-Forms</span> </a>
+          </li>
+
+
+        </ul>
+
+        <ul class="nav navbar-right" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 20px;">
+
+          <button type="button" (click)=logOut() class="btn btn-lg btn-danger">Logout</button>
+
+        </ul>
+      </div>
      </div>
 
      <div *ngIf="service.isCustomer()">
