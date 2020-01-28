@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>show pol for agent Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <span class="label label-info" style="font-size: 25px;margin-left: 550px;">Show Policies</span>
+    <hr>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+
+            <th>Policy No.</th>
+            <th>Date Of Commencement</th>
+            <th>Date Of Maturity</th>
+            <th>Plan No.</th>
+            <th>Policy Status</th>
+            <th>Premium Amount</th>
+            <th>Premium Type</th>
+            <th>Sum Assured</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let pol of policies">
+
+          <td>{{pol.policyNumber}}</td>
+          <td>{{pol.dateOfCommencement}}</td>
+          <td>{{pol.dateOfMaturity}}</td>
+          <td>{{pol.planNo}}</td>
+          <td *ngIf="pol.policyStatus=='ACTIVE'" style="color:blue">{{pol.policyStatus}}</td>
+          <td *ngIf="pol.policyStatus=='LAPSE'" style="color: red;">{{pol.policyStatus}}</td>
+          <td>{{pol.premiumAmount}}</td>
+          <td>{{pol.premiumType}}</td>
+          <td>{{pol.sumAssured}}</td>
+      </tbody>
+    </table>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

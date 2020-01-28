@@ -20,8 +20,16 @@
   <body>
 
       <!--show policies  -->
-      <span class="label label-info" style="font-size: 25px;margin-left: 550px;">Policy Details</span>
+
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title" style="text-align: center;font-weight: bolder;font-size: 30px;color:coral;text-shadow:honeydew 1px 1px 10px;">Show Policies</h2>
+          </div>
+
+      </div>
+
       <hr>
+         <div class="jumbotron-fluid">
           <div class="container">
 
             <div class="table-responsive">
@@ -48,7 +56,8 @@
                     <td>{{policy.premiumAmount}}</td>
                     <td>{{policy.premiumType}}</td>
                     <td>{{policy.sumAssured}}</td>
-                    <td style="text-decoration: wavy;color: red;">{{policy.policyStatus}}</td>
+                    <td *ngIf="policy.policyStatus == 'LAPSE'" style="text-decoration: wavy;color: red;">{{policy.policyStatus}}</td>
+                    <td *ngIf="policy.policyStatus == 'ACTIVE'" style="text-decoration: wavy;color: blue;">{{policy.policyStatus}}</td>
                     <td>
                       <ul class="nav navbar-brand" style="font-weight: bolder;font-family: 'Times New Roman', Times, serif;font-size: 15px;">
                         <li class="active"><a routerLink="/policies/{{policies.policyNumber}}" >Show Details</a></li>
@@ -60,6 +69,7 @@
             </div>
 
           </div>
+         </div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->

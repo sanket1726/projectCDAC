@@ -34,6 +34,7 @@ export class AgentLoginComponent implements OnInit {
           // console.log(a);
           this.router.navigate(['agent']);
       } else {
+        alert('login failed');
         console.log('login failed');
       }
         });

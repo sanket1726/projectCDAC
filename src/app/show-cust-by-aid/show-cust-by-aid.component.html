@@ -12,7 +12,37 @@
 
   </head>
   <body>
-    <h1 class="text-center">{{currentAgent.policyHolders[i].fName}} </h1>
+    <span class="label label-info" style="font-size: 25px;margin-left: 550px;">Show Customers</span>
+    <hr>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>No Of Pol</th>
+          <th>D.O.B</th>
+          <th>Phone Number</th>
+          <th>Email-ID</th>
+          <th>city</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cust of customers">
+          <td>{{cust.custId}}</td>
+          <td>{{cust.fName}} {{cust.lName}}</td>
+          <td>{{cust.noOfPolicies}}</td>
+          <td>{{cust.dob}}</td>
+          <td>{{cust.phNumber}}</td>
+          <td>{{cust.email}}</td>
+          <td *ngIf="cust.addressDetails">{{cust.addressDetails.city}}</td>
+          <!-- <td>
+            <tr *ngFor="let p of cust.policies">
+                <td>{{p.policyNumber}}</td>
+            </tr>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
 
 
 

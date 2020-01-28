@@ -12,8 +12,7 @@ export class ShowCustByAIdComponent implements OnInit {
   // currentAgent: any;
   currentAgent : any;
   agent: any;
-  i = 0;
-  // customersList: any;
+  customers: any;
   constructor(public service: DataService) {
     this.getAgentById();
   }
@@ -21,10 +20,15 @@ export class ShowCustByAIdComponent implements OnInit {
   getAgentById() {
     this.currentAgent = JSON.parse(window.sessionStorage.getItem('object'));
     this.service.getAgentById(this.currentAgent.agentId).subscribe((result) => {
-      console.log(result);
+
       this.agent = result;
       //  this.customersList = this.agent.policyHolders[0];
-    }, (error) => {
+      // if(this.customers == null)
+      this.customers = this.agent.policyHolders;
+      console.log(this.agent);
+
+      console.log(this.agent.policyHolders.policies);
+      }, (error) => {
       console.log(error);
     });
   }

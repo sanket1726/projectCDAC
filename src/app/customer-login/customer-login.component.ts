@@ -23,7 +23,7 @@ export class CustomerLoginComponent implements OnInit {
 
                 console.log(customer);
                 // tslint:disable-next-line: prefer-const
-                let customerLog = this.service.loginCLIA(customer);
+                let customerLog = this.service.loginCustomer(customer);
                 customerLog.subscribe((result) => {
                   console.log(result);
                   if (result !== null) {

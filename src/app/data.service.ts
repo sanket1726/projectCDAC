@@ -78,6 +78,7 @@ export class DataService {
     return this.http.put('http://localhost:8080/liccliaproject/policyHolders/addCustomer/' + agentId , customer);
   }
 
+  // getCustomerByAgentId()
 
 // service for policies
 getDataOfPolicies() {

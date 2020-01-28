@@ -32,6 +32,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DataService } from './data.service';
 import { AuthService } from './auth.service';
 import { ShowCustByAIdComponent } from './show-cust-by-aid/show-cust-by-aid.component';
+import { ShowPolByAidComponent } from './show-pol-by-aid/show-pol-by-aid.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { ShowCustByAIdComponent } from './show-cust-by-aid/show-cust-by-aid.comp
     ViewPolicyStatusComponent,
     CustomerUpdateContactInformationComponent,
     ContactUsComponent,
-    ShowCustByAIdComponent
+    ShowCustByAIdComponent,
+    ShowPolByAidComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +94,8 @@ import { ShowCustByAIdComponent } from './show-cust-by-aid/show-cust-by-aid.comp
       {path: 'show-policy-details', component: ShowPolicyDetailsComponent , canActivate: [AuthService]},
       {path: 'view-policy-status', component: ViewPolicyStatusComponent , canActivate: [AuthService]},
       {path: 'customer-update-contact-infomation', component: CustomerUpdateContactInformationComponent , canActivate: [AuthService]},
-      {path: 'show-cust-by-aid/:agentId', component: ShowCustByAIdComponent , canActivate: [AuthService]}
+      {path: 'show-cust-by-aid/:agentId', component: ShowCustByAIdComponent , canActivate: [AuthService]},
+      {path: 'show-pol-by-aid/:agentId', component: ShowPolByAidComponent , canActivate: [AuthService]}
     ]),
   ],
   providers: [DataService],
